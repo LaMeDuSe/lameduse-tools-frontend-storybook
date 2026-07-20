@@ -1,0 +1,11 @@
+import React from "react";
+import { render } from "@testing-library/react";
+import { describe, test } from 'vitest';
+
+import Button from "./Button";
+
+describe("Button", () => {
+  test("renders the Button component", () => {
+    render(<Button label="Hello world!" type="primary" />);
+  });
+});

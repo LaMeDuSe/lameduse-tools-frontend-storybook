@@ -1,0 +1,71 @@
+@tailwind base;
+
+@font-face {
+    font-family: "Avant Garde Gothic";
+    src: url("../assets/fonts/ITC Avant Garde Gothic Std/ITCAvantGardeStd-Md.otf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../assets/fonts/Montserrat/Montserrat-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../assets/fonts/Montserrat/Montserrat-Regular.ttf");
+    font-weight: normal;
+}
+
+@layer base {
+    .text-logo {
+        font-family: "Avant Garde Gothic";
+    }
+    .text-heading {
+        font-family: "Montserrat";
+        font-weight: bold;
+    }
+    .text-body {
+        font-family: "Montserrat";
+        font-weight: normal;
+    }
+    text, a, p, span, div, li, ul, ol, dl, dt, dd, blockquote, cite, q, em, i, b, strong, small, sub, sup, mark, ins, del, strike, abbr, dfn, kbd, samp, var, code, pre, tt, caption, th, td, figcaption, figure, textarea, input, button, label, legend, fieldset, select, option, optgroup, summary, details, menuitem, menu {
+        @apply text-body;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        @apply text-heading;
+    }
+    a {
+        @apply cursor-pointer;
+    }
+    .link {
+        @apply text-lameduse-primary font-bold hover:underline;
+    }
+    .link-dark {
+        @apply  hover:text-gray-800 hover:underline;
+    }
+    .gradiant-lameduse {
+        @apply bg-gradient-to-tr from-lameduse-secondary to-lameduse-tertiary;
+    }
+    .gradiant-lameduse-1 {
+        @apply bg-gradient-to-tr from-lameduse-primary to-lameduse-secondary;
+    }
+    .gradiant-lameduse-2 {
+        @apply bg-gradient-to-tr from-lameduse-secondary to-lameduse-tertiary;
+    }
+    .text-gradiant-lameduse-1 {
+        @apply bg-gradient-to-tr from-lameduse-primary to-lameduse-secondary bg-clip-text text-transparent;
+    }
+    .text-gradiant-lameduse-2 {
+        @apply bg-gradient-to-tr from-lameduse-secondary to-lameduse-tertiary bg-clip-text text-transparent;
+    }
+    .lameduse-icon-gradient svg:not([aria-hidden="true"])[fill]:not([fill="none"]),
+    .lameduse-icon-gradient svg:not([aria-hidden="true"]) [fill]:not([fill="none"]) {
+        fill: var(--lameduse-icon-paint);
+    }
+    .lameduse-icon-gradient svg:not([aria-hidden="true"])[stroke]:not([stroke="none"]),
+    .lameduse-icon-gradient svg:not([aria-hidden="true"]) [stroke]:not([stroke="none"]) {
+        stroke: var(--lameduse-icon-paint);
+    }
+}
